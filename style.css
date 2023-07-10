@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  font-family: sans-serif;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+}
+button {
+  cursor: pointer;
+}
+
+.sectionBody {
+  background: rgba(0, 0, 0, 0.577);
+  position: absolute;
+  width: 100%;
+  height: 200vh;
+  z-index: 2;
+  display: none;
+}
+.sectionBody.open {
+  display: block;
+}
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 100px 130px;
+  position: relative;
+}
+
+.domino__pizza__wrap__left {
+  width: 820px;
+  padding: 32px;
+  border-radius: 15px;
+  background-color: #f2f2f2;
+}
+.domino__pizza__wrap__left__title h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.domino__pizza__wrap__left__title a {
+  color: #979797;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solidred;
+}
+.domino__pizza__wrap__left h4 {
+  border-radius: 15px;
+  padding: 8px 16px;
+  width: 210px;
+  background-color: white;
+  margin: 24px 0;
+  font-size: 14px;
+}
+.domino__pizza__wrap__left__counter {
+  margin-top: 24px;
+}
+.domino__pizza__wrap__left__counter__img img {
+  margin-right: 16px;
+}
+.domino__pizza__wrap__left__counter__img div p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.domino__pizza__wrap__left__counter__img div span {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+.child {
+  width: 105px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: white;
+  justify-content: space-around;
+}
+.child .counter {
+  font-size: 18px;
+  font-weight: 400;
+}
+.child button {
+  background-color: white;
+  border-radius: 15px;
+  font-size: 22px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.domino__pizza__wrap__left__counter__text p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #979797;
+  text-align: right;
+  margin-bottom: 5px;
+}
+.domino__pizza__wrap__left__counter__text h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.domino__pizza__wrap__right {
+  width: 400px;
+  padding: 32px;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+}
+.domino__pizza__wrap__right__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.izminiti {
+  margin: 31px 0;
+  border-bottom: 1px solid #bebebe;
+  padding-bottom: 30px;
+}
+.izminiti span span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.izminiti button {
+  width: 120px;
+  height: 35px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: white;
+}
+.itogo__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.left__text p,
+.right__text p {
+  margin-top: 10px;
+}
+.spisat {
+  border-bottom: 1px solid #bebebe;
+  border-top: 1px solid #bebebe;
+  padding: 24px 0;
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+.spisat div p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  color: #a1a1a1;
+}
+.spisat div h1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* checkbox */
+
+.toggle {
+  --size: 1.225rem;
+  --width: calc(1.225rem * 2.4);
+  display: inline-grid;
+  align-items: center;
+  width: var(--width);
+  height: var(--size);
+  cursor: pointer;
+}
+
+.toggle::before {
+  content: "";
+  font-size: 0.89rem;
+  grid-area: 1 / -1;
+  padding: 1px;
+  width: var(--width);
+  height: var(--size);
+  transition: all 250ms ease;
+  border-radius: var(--width);
+  background-color: #bcbcbc;
+}
+.toggle::after {
+  content: "";
+  grid-area: 1 / -1;
+  width: calc(var(--size) * 0.9);
+  height: calc(var(--size) * 0.9);
+  transform: translateX(10%);
+  transform-origin: center center;
+  transition: all 250ms ease;
+  border-radius: 100%;
+  background: white;
+}
+
+.toggle:checked::before {
+  background-color: #2be;
+}
+
+.toggle:checked::after {
+  transform: translateX(calc(var(--width) - var(--size) * 0.9));
+}
+
+.toggle:disabled {
+  pointer-events: none;
+  filter: grayscale(1);
+}
+
+.vam__list p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.domino__pizza__wrap__right__btn button {
+  padding: 11px 60px;
+  color: white;
+  background-color: #ff4c34;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.domino__pizza__wrap__right__btn:active button {
+  opacity: 0.9;
+  transform: scale(0.99);
+}
+.domino__pizza__wrap__right__btn p {
+  font-size: 20;
+  font-weight: 600;
+}
+.domino__cards {
+  position: relative;
+}
+.card {
+  width: 220px;
+  padding: 18px;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+}
+.card img {
+  width: 185px;
+  height: 185px;
+}
+.color-orenge-top {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ababab;
+  text-decoration: line-through;
+  margin-left: 50px;
+}
+.color-orenge {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff4c34;
+  margin-bottom: 12px;
+}
+.dobavit__btn {
+  padding: 10px 60px;
+  color: white;
+  background: #ff4c34;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+.dobavit__btn:active {
+  transform: scale(0.98);
+}
+
+.cardImg {
+  position: absolute;
+}
+
+.card__hide {
+  background-color: white;
+  z-index: 12;
+  border-radius: 15px;
+  width: 1002px;
+  text-align: center;
+  padding: 32px;
+  position: absolute;
+  top: -500px;
+  left: 18%;
+  display: none;
+}
+.card__hide.show {
+  display: block;
+}
+#cross {
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-align: right;
+  font-size: 25px;
+}
+.card__hide__left img {
+  margin-top: -30px;
+  width: 384px;
+  height: 384px;
+}
+.card__hide__right {
+  width: 57%;
+  text-align: left;
+  overflow-y: scroll;
+  height: 390px;
+}
+.card__hide__right h1 {
+  font-size: 24px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.card__hide__right p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.size__btns {
+  background-color: #bebebe;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+.size__btns button {
+  padding: 7px 10%;
+  background-color: transparent;
+  border-radius: 15px;
+  transition: all 0.5s ease-in;
+}
+.size__btns button:hover {
+  background-color: white;
+}
+.card__hide__shop {
+  background-color: #bebebe;
+  border-radius: 15px;
+  padding: 11px 12px;
+}
+.mollera {
+  width: 160px;
+  height: 64px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card__hide__shop__counter .mollera .child{
+   margin: 0 auto;
+}
+.card__hide__shop__counter .mollera span {
+  font-size: 12px;
+  font-weight: 400;
+}
+.card__hide__shop__counter .mollera button {
+  font-size: 10px;
+  font-weight: 400;
+}
+.card__hide__shop__counter .mollera h2{
+  font-size: 12px;
+  font-weight: 400;
+}
+.card__hide__shop__counter .mollera p{
+  font-size: 14px;
+  font-weight: 500;
+}
+.setushaya{
+  width: 160px;
+  height: 64px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card__hide__bottom {
+background-color: white;
+padding: 40px 70px;
+border-radius: 0 0 15px 15px;
+}
+.card__hide__bottom .dob{
+  background-color: #ff4c34;
+  padding: 13px 32px;
+  border-radius: 15px;
+  color: white;
+  transition: all 0.6s ease-in;
+}
+.card__hide__bottom .dob:active{
+ opacity: 0.95;
+ transform: scale(0.95);
+}
+.card__hide__bottom .child{
+  border: 1px solid red;
+  width: 120px;
+  font-size: 16px;
+  font-weight: 500;
+}
