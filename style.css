@@ -389,8 +389,42 @@ border-radius: 0 0 15px 15px;
  transform: scale(0.95);
 }
 .card__hide__bottom .child{
-  border: 1px solid red;
   width: 120px;
   font-size: 16px;
   font-weight: 500;
+}
+
+
+/* Accardion started */
+.acc{
+  border: 1px solid red;
+  background-color: #bcbcbc;
+  border-radius: 15px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 5px;
+  height: 70px;
+  overflow-y: hidden;
+  transition: all 0.6s ease-in;
+}
+.acc.height{
+  height: 300px;
+}
+.acc-btn{
+  display: inline-block;
+  font-size: 20px;
+  background-color: green;
+  padding: 10px 50px;
+  border-radius: 15px;
+  margin: 20px 10px 10px 30px;
+  color: white;
+  
+}
+
+.fa-chevron-right{
+  transition: all 0.5s ease;
+  margin-left: 10px;
+}
+.fa-chevron-right.rotate{
+  transform: rotate(90deg);
 }
