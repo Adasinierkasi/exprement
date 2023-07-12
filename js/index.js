@@ -49,6 +49,10 @@ closeModalBtn.addEventListener("click", () => {
   modal.classList.remove("show");
   sectionBody.classList.remove("open");
 });
+sectionBody.addEventListener("click", ()=>{
+	modal.classList.remove("show");
+	sectionBody.classList.remove("open");
+})
 
 //accardion started
 
