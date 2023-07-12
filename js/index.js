@@ -49,19 +49,19 @@ closeModalBtn.addEventListener("click", () => {
   modal.classList.remove("show");
   sectionBody.classList.remove("open");
 });
-sectionBody.addEventListener("click", ()=>{
-	modal.classList.remove("show");
-	sectionBody.classList.remove("open");
-})
+sectionBody.addEventListener("click", () => {
+  modal.classList.remove("show");
+  sectionBody.classList.remove("open");
+});
 
 //accardion started
 
 accBtn.addEventListener("click", () => {
-  if (acc.classList.add("height")) {
-    acc.classList.remove("height");
+  if (acc.classList.contains("height")) {
     chevronRight.classList.remove("rotate");
-  }else{
-	acc.classList.add("height");
+    acc.classList.remove("height");
+  } else {
+    acc.classList.add("height");
     chevronRight.classList.add("rotate");
   }
-})
+});
