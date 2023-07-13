@@ -18,9 +18,10 @@ childBox.forEach((item, index) => {
     counter.textContent = Number(counter.textContent) + 1;
     foo(true);
   });
-  console.log(removeMoney[index]);
+  console.log(dominoMoney[0].textContent);
   const foo = (sof) => {
     if (sof) {
+      console.log(index, removeMoney, dominoMoney);
       removeMoney[index].textContent =
         Number(removeMoney[index].textContent) + 936;
       dominoMoney[index].textContent =
@@ -83,7 +84,7 @@ childBox.forEach((item, index) => {
 setTimeout(() => {
   modal.classList.add("show");
   sectionBody.classList.add("open");
-}, 85000);
+}, 15000);
 // Modal
 openModalBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -106,7 +107,6 @@ sectionBody.addEventListener("click", () => {
 //accardion started
 
 for (let i = 0; i < accBtn.length; i++) {
-  console.log(acc);
   accBtn[i].addEventListener("click", () => {
     if (acc[i].classList.contains("height")) {
       acc[i].classList.remove("height");
