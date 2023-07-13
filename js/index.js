@@ -5,38 +5,85 @@ const childBox = document.querySelectorAll(".child"),
   closeModalBtn = document.querySelector("#cross"),
   modal = document.querySelector(".card__hide"),
   sectionBody = document.querySelector(".sectionBody"),
-  acc = document.querySelector(".acc"),
-  accBtn = document.querySelector(".acc-btn"),
-  chevronRight = document.querySelector(".fa-chevron-right");
+  acc = document.querySelectorAll(".acc"),
+  accBtn = document.querySelectorAll(".acc-btn"),
+  chevronRight = document.querySelectorAll(".fa-chevron-right"),
+  dominoMoney = document.querySelectorAll(".domino__money"),
+  removeMoney = document.querySelectorAll(".line-through");
 
-// Counter
-let count = 0;
-childBox.forEach((item) => {
-  const counter = item.querySelector(".counter"),
-    inctBtn = item.querySelector(".increase"),
-    decrBtn = item.querySelector(".decrease"),
-    howMany = item.querySelector(".howmany");
 
+childBox.forEach((item, index) => {
+  const [decrBtn, counter, inctBtn] = item.children;
   inctBtn.addEventListener("click", () => {
-    count++;
-    counter.textContent = count;
-    howMany.textContent = count * 158;
+    counter.textContent = Number(counter.textContent) + 1;
+    foo(true);
   });
-  decrBtn.addEventListener("click", () => {
-    if (count === 0) {
-      count = 0;
+  console.log(removeMoney[index]);
+  const foo = (sof) => {
+    if (sof) {
+      removeMoney[index].textContent =
+        Number(removeMoney[index].textContent) + 936;
+      dominoMoney[index].textContent =
+        Number(dominoMoney[index].textContent) + 278;
     } else {
-      count--;
+      dominoMoney[index].textContent =
+        Number(dominoMoney[index].textContent) - 278;
+      removeMoney[index].textContent =
+        Number(removeMoney[index].textContent) - 936;
     }
-    counter.textContent = count;
-    howMany.textContent = count * 158;
+  };
+  decrBtn.addEventListener("click", () => {
+    if (Number(counter.textContent) > 1) {
+      counter.textContent = Number(counter.textContent) - 1;
+      foo(false);
+    } else {
+      counter.textContent = Number(counter.textContent);
+    }
   });
 });
+
+// // Counter
+// let count = 1;
+// for(let i = 0; i < childBox.length; i++){
+// 	let item = childBox[i];
+//   const counter = item.querySelector(".counter"),
+//     inctBtn = item.querySelector(".increase"),
+//     decrBtn = item.querySelector(".decrease"),
+//     howMany = item.querySelector(".howmany");
+//     console.log(inctBtn , decrBtn , howMany);
+
+//   inctBtn.addEventListener("click", () => {
+//     count++;
+//     counter.textContent = count;
+//     howMany.textContent = count * 158;
+//   });
+//   decrBtn.addEventListener("click", () => {
+//     if (count === 0) {
+//       count = 0;
+//     } else {
+//       count--;
+//     }
+//     counter.textContent = count;
+//     howMany.textContent = `${count * 158} ₽`;
+//   });
+// };
+
+// let increment = document.querySelectorAll('.increase'),
+// decrement  = document.querySelectorAll('.decrease'),
+// counter = document.querySelectorAll('.counter');
+
+// for(let i = 0; i < increment.length; i++){
+// 	increment.addEventListener('click',()=>{
+// 		const incBtn = increment[i].target
+// 		console.log(incBtn);
+// 	});
+
+// }
 
 setTimeout(() => {
   modal.classList.add("show");
   sectionBody.classList.add("open");
-}, 15000);
+}, 85000);
 // Modal
 openModalBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -54,14 +101,19 @@ sectionBody.addEventListener("click", () => {
   sectionBody.classList.remove("open");
 });
 
+
+
 //accardion started
 
-accBtn.addEventListener("click", () => {
-  if (acc.classList.contains("height")) {
-    chevronRight.classList.remove("rotate");
-    acc.classList.remove("height");
-  } else {
-    acc.classList.add("height");
-    chevronRight.classList.add("rotate");
-  }
-});
+for (let i = 0; i < accBtn.length; i++) {
+  console.log(acc);
+  accBtn[i].addEventListener("click", () => {
+    if (acc[i].classList.contains("height")) {
+      acc[i].classList.remove("height");
+      chevronRight[i].classList.remove("rotate");
+    } else {
+      acc[i].classList.add("height");
+      chevronRight[i].classList.add('rotate')
+    }
+  });
+}
